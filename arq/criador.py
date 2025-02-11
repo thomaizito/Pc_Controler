@@ -4,6 +4,8 @@ class write:
         self.arq = arquivo
         self.v = value
     
+
+
     def writing(self): # Adicionar qualquer arquivo
         try:
             if not self.arq: # Verificar se o arquivo existe!
