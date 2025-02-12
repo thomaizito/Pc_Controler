@@ -1,4 +1,3 @@
-
 class Read:
     def __init__(self):
         self.arq = None
@@ -21,12 +20,8 @@ class Read:
 
             with open(arq) as arq:
                 for linha in arq:
-                    self.ret = linha
+                    self.ret = linha.rstrip()
             return self.ret
         
         except Exception as e:
             print(f"ERRO! {e}")
-
-arquivo = "flag.txt"
-leitor = Read()
-leitor.reading(arquivo)

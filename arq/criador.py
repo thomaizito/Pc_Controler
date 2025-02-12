@@ -1,4 +1,4 @@
-class write:
+class Write:
     def __init__(self):
         self.arq = None
         self.v = None
@@ -33,5 +33,3 @@ class write:
 
         except Exception as e:
             print(f"Erro! {e}")
-
-ar = "flag.txt"

@@ -1,3 +1,8 @@
+# Controlar o computador atravez do cmd!
+# ---------------------------------------
+# | Verificar se o pc já reiniciou hoje!|
+# |                                     |
+# ---------------------------------------
 try:
     import os
 except ModuleNotFoundError:
