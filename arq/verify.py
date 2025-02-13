@@ -1,12 +1,12 @@
 from datetime import date, datetime
-from leitor import Read
-from criador import Write
+from arq.leitor import Read
+from arq.criador import Write
 
 # ARQUIVO PARA VERIFICAR SE O PC JÁ FOI REINICIADO
 
 class Verif:
     def __init__(self) -> bool:
-        self.arq = "flag.txt"
+        self.arq = r".\arq\flag.txt"
         self.final = False
         self.current_date = date.today()
         self.past_date = 0
@@ -38,3 +38,4 @@ class Verif:
         escrever = Write()
         data_str = self.current_date.strftime(r"%d/%m/%y")
         escrever.writing(self.arq, data_str)
+
