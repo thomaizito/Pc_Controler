@@ -28,8 +28,6 @@ class Write:
                         arq.write(f"{i}\n")
                     return True
                 arq.write(self.v)
-            
-            print("Salvo!")
 
         except Exception as e:
             print(f"Erro! {e}")
