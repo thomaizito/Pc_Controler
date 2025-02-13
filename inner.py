@@ -1,6 +1,6 @@
 # Controlar o computador atravez do python!
 try:
-    
+    from time import sleep
     from opener.op_app import Opener
     from os import system
     from arq.verify import Verif
@@ -42,16 +42,27 @@ class Main:
 
             match escolha:
                 case 1:
-                    abridor.code('code', 'github desktop', 'opera', 'cmd')
+                    abridor.code('code', 'github desktop', 'opera')
 
                 case 2:
                     abridor.study('opera')
                 
                 case 3:
-                    abridor.game('steam', 'opera', 'discord')
-                    
+                    abridor.game('steam', 'discord', 'opera')
+                
+                case 4:
+                    abridor.other("opera")
+                
+                case 5:
+                    exit()
+
+                case _:
+                    print("Digite um valor válido")
+                    self.start
+            
+            sleep(5)
+
+            system('taskkill /F /IM cmd.exe')
+
         except Exception as e:
             print(f"Erro! {e}")
-
-sla = Main()
-sla.start()

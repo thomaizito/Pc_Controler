@@ -45,7 +45,7 @@ class Opener:
                     system(r'"C:\Users\thomas\AppData\Roaming\Microsoft\Windows\"Start Menu"\Programs\"Discord Inc"\Discord.lnk""')
                     continue
 
-                system(f"start {i}")
+                system(f"start {i} -wait")
             return True
         
         except Exception as e:

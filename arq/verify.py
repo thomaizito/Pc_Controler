@@ -6,7 +6,7 @@ from arq.criador import Write
 
 class Verif:
     def __init__(self) -> bool:
-        self.arq = r".\arq\flag.txt"
+        self.arq = r"C:\Users\thomas\Documents\Pc_Controler\arq\flag.txt"
         self.final = False
         self.current_date = date.today()
         self.past_date = 0
