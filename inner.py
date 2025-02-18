@@ -16,7 +16,8 @@ class Main:
     @staticmethod
     def verif(func):
         def inner(self):
-            choices = ["s"]
+            choices_true = ["s"]
+            choices_false = ['n']
             verificador = Verif()
 
             if verificador.verify():
@@ -26,11 +27,18 @@ class Main:
 
             if not choice:
                 print("Digite um valor válido")
-                return inner
-            elif choice not in choices:
-                verificador.writing()
-                return func(self)
             
+            elif choice in choices_true:
+                print("Reiniciando o pc")
+            
+            elif choice in choices_false:
+                return func(self)
+
+            else:
+                print("Digite um valor válido")
+                return inner
+            
+
             system('shutdown -r -t 5')
 
         return inner
