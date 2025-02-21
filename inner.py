@@ -25,11 +25,12 @@ class Main:
             
             choice = input("Você quer reiniciar o pc para maior desempenho? (S/N) ").lower()
 
-            if not choice:
-                print("Digite um valor válido")
             
-            elif choice in choices_true:
+            if choice in choices_true:
+
                 print("Reiniciando o pc")
+
+                
             
             elif choice in choices_false:
                 return func(self)
@@ -39,6 +40,7 @@ class Main:
                 return inner
             
 
+            verificador.writing()
             system('shutdown -r -t 5')
 
         return inner
