@@ -10,8 +10,10 @@ except ModuleNotFoundError as e:
     exit()
 
 class Main:
-    def __init__(self):
-        pass
+    def __init__(self, l1, l2, l3):
+        self.l1 = l1
+        self.l2 = l2
+        self.l3 = l3
     
     @staticmethod
     def verif(func):
@@ -48,18 +50,18 @@ class Main:
     @verif
     def start(self):
         try:
-            abridor = Opener()
+            abridor = Opener(self.l1, self.l2, self.l3)
             escolha = int(input("O que você quer fazer?\n 1. Programar\n 2. Estudar\n 3. Jogar\n 4. Navegar na internet\n 5. Outro\n"))
 
             match escolha:
                 case 1:
-                    abridor.code('code', 'github desktop', 'opera')
+                    abridor.code('code')
 
                 case 2:
                     abridor.study('opera')
                 
                 case 3:
-                    abridor.game('steam', 'discord', 'opera')
+                    abridor.game('opera')
                 
                 case 4:
                     abridor.other("opera")
