@@ -55,7 +55,7 @@ class Main:
 
             match escolha:
                 case 1:
-                    abridor.code('code')
+                    abridor.code('code', 'opera', 'github')
 
                 case 2:
                     abridor.study('opera')
