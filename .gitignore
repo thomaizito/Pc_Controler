@@ -6,3 +6,5 @@ arq/__pycache__/verify.cpython-313.pyc
 arq/__pycache__/verify.cpython-313.pyc
 /arq/__pycache__
 /arq
+*.txt
+__pycache__/inner.cpython-313.pyc
