@@ -8,3 +8,4 @@ arq/__pycache__/verify.cpython-313.pyc
 /arq
 *.txt
 __pycache__/inner.cpython-313.pyc
+*.txt
