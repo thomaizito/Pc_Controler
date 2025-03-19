@@ -18,6 +18,8 @@ __Motivos de ter feito__:
 ### Como usar?
 O __arquivo__ `main.py` deve ser copiado e colado na pasta `Statup` ou `Inicializar`
 
+Além disso o arquivo `configurations.py` permite você colocar quais programas quer abrir em cada setor, adicionando-os na lista, ou também caso dê algum erro na hora de abrir os programas
+
 ---
 
 ### Como funciona? 
