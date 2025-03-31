@@ -9,6 +9,7 @@ class Read:
         def inner(self, arq):
             if not arq:
                 return False
+            
             return func(self, arq)
         
         return inner
@@ -20,7 +21,10 @@ class Read:
 
             with open(arq) as arq:
                 for linha in arq:
+                    if not linha:
+                        return False
                     self.ret = linha.rstrip()
+                    
             return self.ret
         
         except Exception as e:

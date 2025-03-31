@@ -55,16 +55,16 @@ class Main:
 
             match escolha:
                 case 1:
-                    abridor.code('code', 'opera', 'github')
+                    abridor.code()
 
                 case 2:
-                    abridor.study('opera')
+                    abridor.study()
                 
                 case 3:
-                    abridor.game('opera')
+                    abridor.game()
                 
                 case 4:
-                    abridor.other("opera")
+                    abridor.other()
                 
                 case 5:
                     exit()

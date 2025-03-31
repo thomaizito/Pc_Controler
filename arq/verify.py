@@ -6,10 +6,12 @@ from arq.criador import Write
 
 class Verif:
     def __init__(self) -> bool:
-        self.arq = r"C:\Users\thomas\Documents\Pc_Controler\arq\flag.txt"
+        self.arq = r"./arq/flag.txt"
         self.final = False
         self.current_date = date.today()
         self.past_date = 0
+        self.leitor = Read()
+        self.criador = Write()
     
     @staticmethod
     def convert(date_ram:date):
@@ -20,8 +22,10 @@ class Verif:
             print(f"Erro! {e}")
 
     def reading(self):
-        leitor = Read()
-        date_past_ram = leitor.reading(self.arq)
+        date_past_ram = self.leitor.reading(self.arq)
+        if not date_past_ram:
+            self.writing()
+
         self.past_date = self.convert(date_past_ram)
         
         return self.past_date
@@ -35,7 +39,7 @@ class Verif:
 
 
     def writing(self):
-        escrever = Write()
         data_str = self.current_date.strftime(r"%d/%m/%y")
-        escrever.writing(self.arq, data_str)
+        self.criador.writing(self.arq, data_str)
+    
 
