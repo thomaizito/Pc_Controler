@@ -14,10 +14,14 @@ class Main:
         self.l1 = l1
         self.l2 = l2
         self.l3 = l3
+        self.confirm = None
     
     @staticmethod
     def verif(func):
         def inner(self):
+            if self.confirm:
+                return func(self)
+
             choices_true = ["s"]
             choices_false = ['n']
             verificador = Verif()
@@ -29,17 +33,16 @@ class Main:
 
             
             if choice in choices_true:
-
                 print("Reiniciando o pc")
-
                 
             
             elif choice in choices_false:
+                self.confirm = True
                 return func(self)
 
             else:
                 print("Digite um valor válido")
-                return inner
+                return inner(self)
             
 
             verificador.writing()
@@ -50,8 +53,8 @@ class Main:
     @verif
     def start(self):
         try:
+            escolha = int(input("Digite o que você quer fazer?\n 1. Programar\n 2. Estudar\n 3. Jogar\n 4. Navegar na internet\n 5. Outro\n"))
             abridor = Opener(self.l1, self.l2, self.l3)
-            escolha = int(input("O que você quer fazer?\n 1. Programar\n 2. Estudar\n 3. Jogar\n 4. Navegar na internet\n 5. Outro\n"))
 
             match escolha:
                 case 1:
@@ -71,11 +74,11 @@ class Main:
 
                 case _:
                     print("Digite um valor válido")
-                    self.start
+                    self.start()
             
             sleep(5)
 
             system('taskkill /F /IM cmd.exe')
 
         except Exception as e:
-            print(f"Erro! {e}")
+            self.start()

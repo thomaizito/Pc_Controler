@@ -7,7 +7,8 @@ Lista_Arquivos_Estudar = [
 
 Lista_Arquivos_Programar = [
     r'chrome',
-    r'code'
+    r'code',
+    r'C:\Users\thoma\OneDrive\Documentos\GitHub\Pc_Controler\atalhos\github_desktop_lnk'
 ]
 
 Lista_Arquivos_Jogar = [
